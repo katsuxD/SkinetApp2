@@ -1,0 +1,15 @@
+<header>
+    <span *ngIf="totalCount && totalCount >0">Đang hiển thị
+        <strong>
+            {{(pageNumber-1) * pageSize+1}} - 
+            {{pageNumber*pageSize
+                > this.totalCount 
+                ? this.totalCount 
+                : pageNumber*pageSize
+            }}
+        </strong> trong <strong>{{this.totalCount}}</strong> mặt hàng hiện có
+    </span>
+    <span *ngIf="totalCount === 0">
+        Không có <strong>mặt hàng</strong> nào hiển thị cho kết quả này 
+    </span>
+</header>
