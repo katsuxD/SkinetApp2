@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <h4> Internal Server Error - Làm mới lại trang sẽ khiến lỗi biến mất</h4>
+    <ng-container *ngIf="error">
+        <h5 class="text-danger">Error: {{error.message}}</h5>
+        <p class="font-weight-bold">
+            Lưu ý: Nếu như bạn đang thấy dòng thông báo này tức là đã có lỗi bên phía Angular
+        </p>
+        <p>Cần làm gì tiếp theo?</p>
+        <ol>
+            <li>
+                Hãy bật chrome dev tools
+            </li>
+            <li>
+                Tiếp theo nhấn vào network tab
+            </li>
+            <li>
+                Kiểm tra những request bị lỗi trong mục failing request
+            </li>
+            <li>
+                Kiểm tra đường dẫn URL đó - Hãy chắc rằng bạn đang nhập chính xác
+            </li>
+            <li>
+                Tái hiện lại lỗi trong postman - Nếu trong Postman có lỗi tương tự, vậy thì lỗi không phải đến từ phía Angular =]] ! 
+            </li>
+        </ol>   
+        <p> Cứ thực hiện theo từng bước như trên - Đấy là lúc bạn đã nhận ra lỗi đến từ đâu và xử lý nó như thế nào ^^ </p>
+        <code class="mt-5" style="background-color: whitesmoke;">{{error.details}}</code>
+    </ng-container>
+</div>
