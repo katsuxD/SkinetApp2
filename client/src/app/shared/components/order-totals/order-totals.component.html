@@ -1,0 +1,22 @@
+<div class="bg-light px-4 py-3 text-uppercase font-weight-bold">
+    Tổng cộng đã đặt
+</div>
+<div class="p-4">
+    <p class="font-italic mb-4">
+        Chi phí ship sẽ được tự động tính thêm vào tùy theo lựa chọn của bạn trong phần thanh toán
+    </p>
+    <ul class="list-unstyled mb-4" *ngIf="(basketTotal$ | async) as totals">
+        <li class="d-flex justify-content-between py-3 border-bottom">
+            <strong class="text-muted">Chọn mua</strong>
+            <strong>{{totals.subtotal | currency}}</strong>
+        </li>
+        <li class="d-flex justify-content-between py-3 border-bottom">
+            <strong class="text-muted">Vận chuyển & đóng gói</strong>
+            <strong>{{totals.shipping | currency}}</strong>
+        </li>
+        <li class="d-flex justify-content-between py-3 border-bottom">
+            <strong class="text-muted">Tổng trả</strong>
+            <strong>{{totals.total | currency}}</strong>
+        </li>
+    </ul>
+</div>
